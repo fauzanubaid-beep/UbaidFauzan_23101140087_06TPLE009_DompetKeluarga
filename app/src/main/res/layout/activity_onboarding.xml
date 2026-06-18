@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hero Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_navy"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="56dp"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setup Profil&#10;&amp; Gaji"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textColor="@color/color_white"
+                android:lineSpacingExtra="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isi data ini untuk memulai perencanaan keuangan keluarga"
+                android:textColor="@color/color_white"
+                android:alpha="0.8"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Form Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nama Kepala Keluarga" style="@style/LabelText"/>
+            <EditText android:id="@+id/et_nama" style="@style/InputField"
+                android:hint="Contoh: Budi Santoso"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Jumlah Anggota Keluarga" style="@style/LabelText"/>
+            <Spinner android:id="@+id/spinner_anggota" style="@style/InputField"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Gaji / Pemasukan Tetap Bulanan (Rp)" style="@style/LabelText"/>
+            <EditText android:id="@+id/et_pemasukan" style="@style/InputField"
+                android:hint="8500000"
+                android:inputType="numberDecimal"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Sumber Pemasukan" style="@style/LabelText"/>
+            <EditText android:id="@+id/et_sumber" style="@style/InputField"
+                android:hint="Gaji PNS, Usaha, dll"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Target Dana Darurat" style="@style/LabelText"/>
+            <Spinner android:id="@+id/spinner_darurat" style="@style/InputField"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Buat PIN 4 Digit" style="@style/LabelText"/>
+            <EditText android:id="@+id/et_pin" style="@style/InputField"
+                android:hint="****"
+                android:inputType="numberPassword"
+                android:maxLength="4"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Konfirmasi PIN" style="@style/LabelText"/>
+            <EditText android:id="@+id/et_pin_konfir" style="@style/InputField"
+                android:hint="****"
+                android:inputType="numberPassword"
+                android:maxLength="4"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_lanjut"
+                style="@style/OrangePillButton"
+                app:backgroundTint="@color/color_navy"
+                android:text="Lanjut → Atur Prioritas Pos"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

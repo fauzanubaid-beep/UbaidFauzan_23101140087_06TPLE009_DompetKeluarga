@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_navy">
+
+    <!-- Toolbar dengan tombol back -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_navy"
+        app:navigationIcon="@drawable/ic_chevron_left"
+        app:navigationIconTint="@color/color_white"
+        app:navigationContentDescription="Kembali" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/tv_toolbar_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Transaksi"
+                android:textColor="@color/color_white"
+                android:textSize="17sp"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_toolbar_bulan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jun 2026"
+                android:textColor="#AACCFF"
+                android:textSize="12sp"
+                android:fontFamily="@font/plus_jakarta_sans"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Summary Card melayang -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_cream"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+
+            <!-- Header ringkasan stats -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+                app:cardBackgroundColor="@color/color_white"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/color_card_border"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Row 1: Alokasi + Jumlah Transaksi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ALOKASI"
+                                android:textSize="10sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:letterSpacing="0.1"
+                                android:textColor="@color/color_muted"/>
+                            <TextView
+                                android:id="@+id/tv_alokasi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 0"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:textColor="@color/color_navy"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="JML TRANSAKSI"
+                                android:textSize="10sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:letterSpacing="0.1"
+                                android:textColor="@color/color_muted"/>
+                            <TextView
+                                android:id="@+id/tv_jumlah_trx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 transaksi"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:textColor="@color/color_navy"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Progress bar pemakaian -->
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progress_pemakaian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:max="100"
+                        android:progress="0"
+                        app:trackThickness="10dp"
+                        app:trackCornerRadius="5dp"
+                        app:indicatorColor="@color/color_blue"
+                        app:trackColor="@color/color_card_bg"/>
+
+                    <!-- Row 2: Terpakai + Sisa -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TERPAKAI"
+                                android:textSize="10sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:letterSpacing="0.1"
+                                android:textColor="@color/color_muted"/>
+                            <TextView
+                                android:id="@+id/tv_terpakai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 0"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:textStyle="bold"
+                                android:textColor="#A31212"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="end">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SISA"
+                                android:textSize="10sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:letterSpacing="0.1"
+                                android:textColor="@color/color_muted"/>
+                            <TextView
+                                android:id="@+id/tv_sisa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 0"
+                                android:textSize="16sp"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:textStyle="bold"
+                                android:textColor="#1D9E75"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Label riwayat -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riwayat Transaksi"
+                android:textStyle="bold"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textColor="@color/color_heading"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- List transaksi -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_detail_transaksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

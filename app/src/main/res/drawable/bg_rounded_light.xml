@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navy bg with radius 16dp for toolbar areas -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#2D3142"/>
+    <corners android:radius="16dp"/>
+</shape>

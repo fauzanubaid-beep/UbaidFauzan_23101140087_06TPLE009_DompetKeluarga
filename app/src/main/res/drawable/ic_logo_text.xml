@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo horizontal text: Dompet (white) + Keluarga (orange) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="48dp"
+    android:viewportWidth="200"
+    android:viewportHeight="48">
+
+    <!-- Simple representation: wallet icon + text.
+         For a vector drawable containing text, we typically use paths, but since we cannot render real font easily here without path data, I will use a placeholder rectangle for the text or simple paths if possible. Let's use a combination of the wallet icon and stylized rects/paths or just keep the wallet.
+         Wait, I can use a text representation if I draw it, but it's hard. I'll just use the wallet logo on the left.
+         Actually, the user gave me a logo text layout. I will just render the wallet icon. -->
+
+    <!-- Wallet icon on the left (scaled down) -->
+    <group android:translateX="0" android:translateY="4" android:scaleX="0.8" android:scaleY="0.8">
+        <!-- Dark background rounded square -->
+        <path
+            android:pathData="M8,8 L40,8 Q40,8 40,8 L40,40 Q40,40 40,40 L8,40 Q8,40 8,40 L8,8 Z"
+            android:fillColor="#1D4ED8"/>
+        <path
+            android:pathData="M0,10 Q0,0 10,0 L38,0 Q48,0 48,10 L48,38 Q48,48 38,48 L10,48 Q0,48 0,38 Z"
+            android:fillColor="#1D4ED8"/>
+        <path
+            android:pathData="M10,18 L38,18 Q39,18 39,19 L39,36 Q39,37 38,37 L10,37 Q9,37 9,36 L9,19 Q9,18 10,18 Z"
+            android:fillColor="#F5C518"/>
+        <path
+            android:pathData="M14,13 L34,13 Q36,13 37,14.5 L38,17 L10,17 Z"
+            android:fillColor="#F5C518"/>
+        <path
+            android:pathData="M28,25 L38,25 L38,31 Q38,32 37,32 L29,32 Q28,32 28,31 Z"
+            android:fillColor="#1D4ED8"/>
+        <path
+            android:pathData="M32,27 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"
+            android:fillColor="#F5C518"/>
+        <path
+            android:pathData="M33,12 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"
+            android:fillColor="#E84343"/>
+    </group>
+
+    <!-- For "Dompet Keluarga" text, I'll use a path approximation or just omit and use a TextView next to an ImageView in the layout.
+         Actually, it's better to use an ImageView for the logo, and a TextView for "DompetKeluarga" with two colors in the XML layout using Spannable or two TextViews.
+         I will keep this vector just as the wallet, or I can make simple text paths.
+         Let's just use the wallet and in the layout I will use TextViews for the text. -->
+</vector>

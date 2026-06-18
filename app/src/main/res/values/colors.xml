@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== BRAND CORE ===== -->
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_blue">#2563EB</color>
+    <color name="color_blue_dark">#1D4ED8</color>
+    <color name="color_blue_light">#EFF4FF</color>
+    <color name="color_yellow">#F5C518</color>
+    <color name="color_yellow_dark">#D4A800</color>
+    <color name="color_red">#E84343</color>
+    <color name="color_red_light">#FDEAEA</color>
+    <color name="color_cream">#FAF0E6</color>
+
+    <!-- ===== TEXT ===== -->
+    <color name="color_heading">#1A1A2E</color>
+    <color name="color_body">#4A4A6A</color>
+    <color name="color_muted">#9898B0</color>
+
+    <!-- ===== CARDS & SURFACES ===== -->
+    <color name="color_card_surface">#FFF8EE</color>
+    <color name="color_card_border">#EDE0CE</color>
+    <color name="color_card_bg">#FFFFFF</color>
+    <color name="color_lavender">#FFF8EE</color>
+
+    <!-- ===== LEGACY ALIASES (mapped to new palette) ===== -->
+    <color name="color_navy">#2563EB</color>
+    <color name="color_indigo">#1D4ED8</color>
+    <color name="color_orange">#F5C518</color>
+    <color name="color_magenta">#2563EB</color>
+
+    <!-- ===== PER-CATEGORY ===== -->
+    <color name="cat_dana_darurat">#1D9E75</color>
+    <color name="cat_tabungan">#0F6E56</color>
+    <color name="cat_keb_pokok">#E84343</color>
+    <color name="cat_pendidikan">#7F77DD</color>
+    <color name="cat_investasi">#2563EB</color>
+    <color name="cat_hiburan">#F5C518</color>
+    <color name="cat_sosial">#EF9F27</color>
+
+    <!-- ===== THEME MAPPED (Material) ===== -->
+    <color name="md_theme_light_primary">#2563EB</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#EFF4FF</color>
+    <color name="md_theme_light_onPrimaryContainer">#1D4ED8</color>
+
+    <color name="md_theme_light_secondary">#F5C518</color>
+    <color name="md_theme_light_onSecondary">#1A1A2E</color>
+    <color name="md_theme_light_secondaryContainer">#FFF8D6</color>
+    <color name="md_theme_light_onSecondaryContainer">#5A4200</color>
+
+    <color name="md_theme_light_tertiary">#E84343</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#FDEAEA</color>
+    <color name="md_theme_light_onTertiaryContainer">#7A0000</color>
+
+    <color name="md_theme_light_background">#FAF0E6</color>
+    <color name="md_theme_light_onBackground">#1A1A2E</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_onSurface">#1A1A2E</color>
+    <color name="md_theme_light_surfaceVariant">#FFF8EE</color>
+    <color name="md_theme_light_onSurfaceVariant">#4A4A6A</color>
+
+    <color name="md_theme_light_error">#E84343</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#FDEAEA</color>
+    <color name="md_theme_light_outline">#EDE0CE</color>
+
+    <!-- ===== UI EXTRAS ===== -->
+    <color name="nav_bg">#FFFFFF</color>
+    <color name="nav_active">#F5C518</color>
+    <color name="nav_inactive">#9898B0</color>
+
+    <!-- ===== SEMANTIC ===== -->
+    <color name="pos_sisa_positive">#1D9E75</color>
+    <color name="pos_sisa_negative">#E84343</color>
+
+</resources>

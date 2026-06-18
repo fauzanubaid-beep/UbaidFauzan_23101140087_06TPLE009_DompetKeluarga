@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ========== HEADER ========== -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_blue">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="48dp"> <!-- Padding untuk memberikan ruang overlap -->
+
+                    <!-- Baris atas: Wallet icon + Nama + Lonceng -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_nama_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- Wallet icon dalam kotak rounded kuning -->
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_wallet_icon_box">
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_logo_wallet" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tv_nama"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Keluarga Budi"
+                                android:textColor="@color/color_white"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:layout_marginStart="10dp" />
+                        </LinearLayout>
+
+                        <!-- Lonceng kanan -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_notification"
+                            app:tint="@color/color_white"
+                            android:contentDescription="Notifikasi" />
+                    </RelativeLayout>
+
+                    <!-- Teks greeting -->
+                    <TextView
+                        android:id="@+id/tv_sapaan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat malam! Sudah catat pengeluaran hari ini?"
+                        android:textColor="@color/color_white"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginTop="12dp" />
+
+                    <!-- Label Pemasukan Bulan Ini -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemasukan Bulan Ini"
+                        android:textColor="@color/color_white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginTop="20dp" />
+
+                    <!-- Nominal besar -->
+                    <TextView
+                        android:id="@+id/tv_pemasukan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 5.000.000"
+                        android:textColor="@color/color_white"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Periode -->
+                    <TextView
+                        android:id="@+id/tv_periode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jun 2026"
+                        android:textColor="@color/color_white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- ========== CARD STATUS KEUANGAN (Inside Header) ========== -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="#26FFFFFF" 
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="20dp">
+
+                            <!-- Skor Circle -->
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp">
+                                
+                                <com.ubaidfauzan.dompetkeluarga.views.CircularScoreView
+                                    android:id="@+id/circular_score_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_skor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="85%"
+                                    android:textColor="@color/color_yellow_dark"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/plus_jakarta_sans"
+                                    android:layout_gravity="center" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="16dp">
+
+                                <!-- Badge Status -->
+                                <LinearLayout
+                                    android:id="@+id/ll_status_badge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_status_sehat"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical"
+                                    android:paddingHorizontal="10dp"
+                                    android:paddingVertical="4dp"
+                                    android:layout_marginBottom="6dp">
+
+                                    <ImageView
+                                        android:id="@+id/iv_status_icon"
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:src="@drawable/ic_status_sehat"
+                                        app:tint="@color/color_white"
+                                        android:layout_marginEnd="4dp"
+                                        android:contentDescription="Ikon Status Keuangan" />
+
+                                    <TextView
+                                        android:id="@+id/tv_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sehat"
+                                        android:textColor="@color/color_white"
+                                        android:textSize="12sp"
+                                        android:fontFamily="@font/plus_jakarta_sans"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <!-- Deskripsi rekomendasi -->
+                                <TextView
+                                    android:id="@+id/tv_rek_spk"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Luar biasa! Keuangan keluarga sangat terjaga bulan ini."
+                                    android:textColor="@color/color_white"
+                                    android:textSize="13sp"
+                                    android:fontFamily="@font/plus_jakarta_sans"
+                                    android:lineSpacingMultiplier="1.2" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- ========== CONTENT SECTION (Overlapping Header) ========== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_content_top_curved"
+                android:layout_marginTop="-24dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="100dp">
+
+                <!-- ========== BANNER AKHIR BULAN ========== -->
+                <LinearLayout
+                    android:id="@+id/ll_banner_akhir_bulan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_lavender_card"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_status_info"
+                        app:tint="@color/color_orange" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bulan hampir selesai — yuk pastikan semua pos sudah terisi! 📅"
+                        android:textColor="@color/color_body"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <!-- ========== SECTION POS KEUANGAN ========== -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pos Keuangan"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColor="@color/color_heading"
+                    android:textSize="15sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_pos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <include
+                    android:id="@+id/empty_state_pos"
+                    layout="@layout/layout_empty_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Action Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="end">
+
+        <!-- Pemasukan FAB -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_pemasukan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_upload"
+                app:backgroundTint="@color/color_yellow"
+                app:tint="@color/color_white"
+                app:fabSize="normal"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:elevation="0dp"
+                app:pressedTranslationZ="0dp"
+                app:hoveredFocusedTranslationZ="0dp"
+                android:contentDescription="Tambah Pemasukan" />
+
+        </LinearLayout>
+
+        <!-- Transaksi FAB -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_add"
+                app:backgroundTint="@color/color_red"
+                app:tint="@color/color_white"
+                app:fabSize="normal"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:elevation="0dp"
+                app:pressedTranslationZ="0dp"
+                app:hoveredFocusedTranslationZ="0dp"
+                android:contentDescription="Tambah Transaksi" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

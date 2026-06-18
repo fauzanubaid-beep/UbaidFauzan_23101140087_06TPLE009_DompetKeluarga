@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Nama Pos" style="@style/LabelText"/>
+        <EditText android:id="@+id/et_nama" style="@style/InputField"
+            android:hint="Contoh: Dana Darurat"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Mode Alokasi" style="@style/LabelText"/>
+
+        <RadioGroup android:id="@+id/rg_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rb_persen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="% Persentase"
+                android:checked="true"
+                android:buttonTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnSurface"/>
+            <RadioButton android:id="@+id/rb_nominal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rp Nominal"
+                android:buttonTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnSurface"/>
+        </RadioGroup>
+
+        <TextView android:id="@+id/tv_label_nilai"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Persentase dari Pemasukan (%)" style="@style/LabelText"/>
+        <EditText android:id="@+id/et_nilai" style="@style/InputField"
+            android:hint="10.0"
+            android:inputType="numberDecimal"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Warna Pos" style="@style/LabelText"/>
+
+        <RadioGroup android:id="@+id/rg_warna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <RadioButton android:id="@+id/rb_hijau" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Hijau" android:checked="true"
+                android:buttonTint="#1D9E75"/>
+            <RadioButton android:id="@+id/rb_biru" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Biru" android:buttonTint="#378ADD"/>
+            <RadioButton android:id="@+id/rb_merah" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Oranye" android:buttonTint="#D85A30"/>
+            <RadioButton android:id="@+id/rb_ungu" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Ungu" android:buttonTint="#7F77DD"/>
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>

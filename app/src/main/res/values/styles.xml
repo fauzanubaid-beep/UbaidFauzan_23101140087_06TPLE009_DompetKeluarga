@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Form label above an input field -->
+    <style name="LabelText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textColor">@color/color_body</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <!-- Text input fields: white bg, lavender border, radius 12dp -->
+    <style name="InputField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/color_heading</item>
+        <item name="android:textColorHint">@color/color_muted</item>
+    </style>
+
+    <!-- PIN Keypad buttons: medium circle, light gray bg -->
+    <style name="KeypadButton">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@drawable/bg_keypad_button</item>
+        <item name="android:textColor">@color/color_heading</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Default card: white bg, radius 16dp, no elevation -->
+    <style name="AppCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/color_white</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- Lavender card: lavender bg, radius 16dp, no elevation -->
+    <style name="LavenderCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/color_lavender</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- Hero card: navy bg, radius 24dp at top -->
+    <style name="HeroCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/color_navy</item>
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- Orange pill CTA button -->
+    <style name="OrangePillButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="backgroundTint">@color/color_orange</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <!-- Magenta text action button -->
+    <style name="MagentaTextButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/color_magenta</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Navy solid button -->
+    <style name="NavyButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="backgroundTint">@color/color_navy</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <!-- Bottom Nav Custom Styles -->
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="App.Custom.BottomNav.Active" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/color_magenta</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="App.Custom.BottomNav.Inactive" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/color_muted</item>
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- ============================================== -->
+    <!-- TYPOGRAPHY SYSTEM (Plus Jakarta Sans)          -->
+    <!-- ============================================== -->
+
+    <!-- DISPLAY - For large financial numbers -->
+    <style name="TextAppearance.App.Display.Large" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    
+    <style name="TextAppearance.App.Display.Medium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- HEADING - For titles, buttons, names -->
+    <style name="TextAppearance.App.Heading.H1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">26sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Heading.H2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Heading.H3" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Heading.H4" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Heading.H5" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Heading.H6" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">17sp</item>
+    </style>
+
+    <!-- BODY - For standard text, muted labels -->
+    <style name="TextAppearance.App.Body.Large" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">21sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Body.Medium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Body.Small" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Label.Large" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Label.Small" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="lineHeight">15sp</item>
+    </style>
+
+    <!-- MONO - For precision data, PIN, SPK Score -->
+    <style name="TextAppearance.App.Mono.Large" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextAppearance.App.Mono.Medium" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextAppearance.App.Mono.Small" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextAppearance.App.Mono.XSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <!-- ============================================== -->
+    <!-- NEW TEXT STYLES (per user request)             -->
+    <!-- ============================================== -->
+
+    <!-- Nominal besar header beranda -->
+    <style name="TextNominalBesar">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+
+    <!-- Nama pos / judul kartu -->
+    <style name="TextJudulKartu">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">#1A1A1A</item>
+    </style>
+
+    <!-- Nominal saldo hijau -->
+    <style name="TextNominalSaldo">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">#22A96E</item>
+    </style>
+
+    <!-- Label kecil abu (Terpakai, Alokasi, %) -->
+    <style name="TextLabelKecil">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#9E9E9E</item>
+    </style>
+
+    <!-- Skor keuangan (angka 75) -->
+    <style name="TextSkor">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#2347D4</item>
+    </style>
+
+    <!-- Judul halaman di header biru -->
+    <style name="TextJudulHalaman">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Nominal transaksi positif -->
+    <style name="TextNominalMasuk">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">#22A96E</item>
+    </style>
+
+    <!-- Nominal transaksi negatif -->
+    <style name="TextNominalKeluar">
+        <item name="android:fontFamily">@font/plus_jakarta_sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">#E53935</item>
+    </style>
+
+</resources>

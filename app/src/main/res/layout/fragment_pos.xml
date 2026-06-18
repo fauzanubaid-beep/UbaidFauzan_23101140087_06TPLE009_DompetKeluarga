@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_navy">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:titleTextColor="@color/color_white">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pos Keuangan"
+                        android:textColor="@color/color_white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:textStyle="bold"/>
+                        
+                    <TextView
+                        android:id="@+id/tv_konteks_pos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 pos aktif · Total alokasi Rp 0"
+                        android:textColor="#B3DEFF"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_kelola"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_settings"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/color_white"/>
+
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+        
+        <View android:layout_width="match_parent" android:layout_height="24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_content_top_curved_cream"
+        android:layout_marginTop="-24dp"
+        android:paddingTop="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:clipToPadding="false"/>
+
+        <include
+            android:id="@+id/empty_state_pos"
+            layout="@layout/layout_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+            
+    </LinearLayout>
+
+</LinearLayout>

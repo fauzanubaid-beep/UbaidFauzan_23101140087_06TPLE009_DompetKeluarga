@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="40dp">
+
+    <TextView
+        android:id="@+id/tv_empty_emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📭"
+        android:textSize="48sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_empty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum ada data"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textColor="@color/color_heading"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_empty_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambahkan data untuk mulai melihat ringkasan di sini."
+        android:textSize="13sp"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textColor="@color/color_muted"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:lineSpacingMultiplier="1.4"/>
+
+</LinearLayout>

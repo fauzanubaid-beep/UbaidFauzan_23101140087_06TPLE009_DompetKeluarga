@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/color_white">
+
+    <View android:layout_width="0dp" android:layout_height="32dp"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_dompet_keluarga"/>
+
+    <!-- App Name with dual colors -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dompet"
+            android:textColor="@color/color_heading"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keluarga"
+            android:textColor="@color/color_blue"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi Pencatat Keuangan Keluarga"
+        android:textColor="@color/color_body"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"/>
+
+    <View android:layout_width="0dp" android:layout_height="48dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan PIN 4 digit"
+        android:textColor="@color/color_body"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textSize="13sp"/>
+
+    <!-- 4 dots indicator -->
+    <LinearLayout
+        android:id="@+id/ll_pin_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <!-- By default, showing 4 empty dots -->
+        <View android:id="@+id/dot_1" android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_pin_dot_empty" android:layout_margin="8dp"/>
+        <View android:id="@+id/dot_2" android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_pin_dot_empty" android:layout_margin="8dp"/>
+        <View android:id="@+id/dot_3" android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_pin_dot_empty" android:layout_margin="8dp"/>
+        <View android:id="@+id/dot_4" android:layout_width="12dp" android:layout_height="12dp" android:background="@drawable/bg_pin_dot_empty" android:layout_margin="8dp"/>
+    </LinearLayout>
+    
+    <!-- Hidden TextView to maintain code logic if necessary, or we can just hide it completely and update Logic -->
+    <TextView
+        android:id="@+id/tv_pin_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="?attr/colorError"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+
+    <View android:layout_width="0dp" android:layout_height="32dp"/>
+
+    <!-- Keypad 3x4 -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_gravity="center">
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_1" android:text="1" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_2" android:text="2" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_3" android:text="3" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_4" android:text="4" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_5" android:text="5" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_6" android:text="6" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_7" android:text="7" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_8" android:text="8" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_9" android:text="9" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lupa"
+            android:text="Lupa"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:textSize="14sp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/color_heading"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_0" android:text="0" style="@style/KeypadButton"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_hapus"
+            android:text="⌫"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:textSize="20sp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/color_heading"/>
+
+    </GridLayout>
+</LinearLayout>

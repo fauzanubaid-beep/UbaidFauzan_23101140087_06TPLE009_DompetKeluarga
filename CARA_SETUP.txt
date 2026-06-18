@@ -1,0 +1,70 @@
+
+========================================================
+DOMPET KELUARGA - Android Native Java
+========================================================
+
+PERSYARATAN:
+- Android Studio (versi terbaru)
+- JDK 8 atau lebih baru
+- HP Redmi Note 13 + kabel USB
+
+LANGKAH SETUP:
+1. Buka Android Studio
+2. File -> New -> New Project
+   - Pilih "Empty Views Activity"
+   - Language: Java
+   - Minimum SDK: API 24
+   - Package: com.dompetkeluarga.app
+
+3. Copy semua file Java dari folder:
+   app/src/main/java/com/dompetkeluarga/app/
+   ke project Anda (sesuaikan path)
+
+4. Copy layout XML dari folder:
+   app/src/main/res/layout/
+   ke res/layout/ project Anda
+
+5. Ganti isi build.gradle (app) dengan:
+   - Isi dari file app/build.gradle di sini
+
+6. Ganti settings.gradle dengan isi dari settings.gradle
+
+7. Klik "Sync Project with Gradle Files"
+
+8. Aktifkan Developer Mode di Redmi Note 13:
+   Settings -> About Phone -> ketuk MIUI Version 7x
+   Settings -> Additional Settings -> Developer Options
+   -> USB Debugging: ON
+
+9. Colok HP ke laptop via USB
+   Pilih "File Transfer" di HP
+
+10. Klik Run (Shift+F10) di Android Studio
+
+FILE LAYOUT YANG PERLU DIBUAT (tambahkan sendiri via
+   Android Studio -> New -> Layout Resource File):
+   - activity_splash.xml
+   - activity_login.xml
+   - activity_onboarding.xml
+   - activity_main.xml
+   - activity_tambah_transaksi.xml
+   - fragment_beranda.xml
+   - fragment_pos.xml
+   - fragment_laporan.xml
+   - item_pos_summary.xml
+   - menu/bottom_nav_menu.xml
+
+STRUKTUR PACKAGE:
+com.dompetkeluarga.app
+  ├── models/          -> Data class (UserProfile, PosKeuangan, dll)
+  ├── database/        -> DatabaseHelper (SQLite)
+  ├── spk/             -> SpkService, HasilEvaluasi, ReminderItem
+  ├── activities/      -> Semua Activity (layar utama)
+  ├── fragments/       -> Beranda, Pos, Laporan Fragment
+  ├── adapters/        -> RecyclerView adapter
+  └── services/        -> PdfService
+
+SPK YANG DIIMPLEMENTASIKAN:
+1. Rank Reciprocal  -> SpkService.hitungBobotRankReciprocal()
+2. SAW              -> SpkService.rankingRedistribusi()
+3. Rule-Based       -> SpkService.evaluasiKeuangan()

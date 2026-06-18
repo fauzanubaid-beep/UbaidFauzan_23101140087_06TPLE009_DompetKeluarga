@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_navy"
+        app:titleTextColor="@color/color_white">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_action_add_income"
+                app:tint="@color/color_white"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Ikon Tambah Transaksi" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tambah Transaksi"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Nominal" style="@style/LabelText"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp "
+                android:textColor="@color/color_magenta"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"/>
+            <EditText android:id="@+id/et_nominal" style="@style/InputField"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Keterangan" style="@style/LabelText"/>
+        <EditText android:id="@+id/et_catatan" style="@style/InputField"
+            android:hint="Contoh: Belanja mingguan"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Pilih Pos" style="@style/LabelText"/>
+        <Spinner android:id="@+id/spinner_pos" style="@style/InputField"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_simpan"
+            style="@style/OrangePillButton"
+            android:text="Simpan Transaksi"
+            android:layout_marginTop="32dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Kotak luar dompet -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M17,4 H7 C5.343,4 4,5.343 4,7 v10 c0,1.657 1.343,3 3,3 h10 c1.657,0 3,-1.343 3,-3 v-10 C20,5.343 18.657,4 17,4 Z" />
+    
+    <!-- Garis jahitan/lipatan atas -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M4,9 h16" />
+        
+    <!-- Tali pengait samping -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M20,12 h1.5 c1.381,0 2.5,1.119 2.5,2.5 c0,1.381 -1.119,2.5 -2.5,2.5 h-1.5" />
+        
+    <!-- Garis/lubang pada tali pengait -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M16.5,14.5 h2" />
+</vector>

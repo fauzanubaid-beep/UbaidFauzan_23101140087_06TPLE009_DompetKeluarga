@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Row content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="14dp"
+        android:paddingHorizontal="4dp">
+
+        <!-- Colored dot -->
+        <View
+            android:id="@+id/view_dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_circle"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Date column: big day number + small month -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:minWidth="36dp">
+
+            <TextView
+                android:id="@+id/tv_hari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_heading"
+                android:fontFamily="@font/plus_jakarta_sans"/>
+
+            <TextView
+                android:id="@+id/tv_bulan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jun"
+                android:textSize="11sp"
+                android:textColor="@color/color_muted"
+                android:fontFamily="@font/plus_jakarta_sans"/>
+        </LinearLayout>
+
+        <!-- Vertical divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="@color/color_card_border"
+            android:layout_marginHorizontal="14dp"/>
+
+        <!-- Name + catatan -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nama_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pos"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_heading"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_catatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catatan transaksi"
+                android:textSize="12sp"
+                android:textColor="@color/color_muted"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <!-- Nominal -->
+        <TextView
+            android:id="@+id/tv_nominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 100.000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_heading"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Bottom separator line -->
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_card_border"
+        android:layout_marginStart="60dp"/>
+
+    <!-- Hidden views to maintain adapter compatibility -->
+    <TextView
+        android:id="@+id/tv_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_jenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>

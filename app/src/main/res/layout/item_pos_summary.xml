@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/color_card_bg"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/color_card_border"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icon circle -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_cat_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_circle"
+                    app:tint="@color/cat_keb_pokok" />
+
+                <ImageView
+                    android:id="@+id/iv_cat_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cat_keb_pokok"
+                    app:tint="@color/color_white" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nama_pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dana Darurat"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_heading" />
+
+                <TextView
+                    android:id="@+id/tv_bobot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="38.57%"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:textColor="@color/color_body"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Nominal sisa -->
+            <TextView
+                android:id="@+id/tv_sisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 1.728.500"
+                android:textStyle="bold"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textSize="14sp"
+                android:textColor="@color/cat_dana_darurat" />
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:max="100"
+            android:progress="50"
+            app:trackThickness="6dp"
+            app:trackCornerRadius="3dp"
+            app:indicatorColor="@color/cat_keb_pokok"
+            app:trackColor="@color/color_card_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_terpakai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Terpakai Rp 200.000"
+                android:textSize="12sp"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textColor="@color/color_body" />
+
+            <TextView
+                android:id="@+id/tv_alokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alokasi Rp 1.928.500"
+                android:textSize="12sp"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:textColor="@color/color_body" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_insight_pos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pemakaian normal, tetap terjaga."
+            android:textSize="12sp"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:textColor="@color/color_heading"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    style="@style/AppCardView">
+
+    <!-- Wrapper that can have magenta dashed bg on drag -->
+    <LinearLayout
+        android:id="@+id/ll_drag_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_circle_green"
+            android:gravity="center"
+            android:text="#1"
+            android:textColor="@color/color_white"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/iv_cat_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_cat_keb_pokok"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nama Pos"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_bobot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            android:textSize="12sp"
+            android:textColor="@color/color_white"
+            android:background="@drawable/bg_rounded_green"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_drag_handle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_action_priority"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="Geser untuk mengubah prioritas" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
